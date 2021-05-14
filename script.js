@@ -94,7 +94,16 @@ const paths = [
   './assets/photos/File 93.jpeg',
   './assets/photos/File 94.jpeg',
   './assets/photos/File 95.jpeg',
-  './assets/photos/File 96.jpeg'
+  './assets/photos/File 96.jpeg',
+  './assets/photos/File1.png',
+  './assets/photos/File2.png',
+  './assets/photos/File3.png',
+  './assets/photos/File4.png',
+  './assets/photos/File5.png',
+  './assets/photos/File6.png',
+  './assets/photos/File7.png',
+  './assets/photos/File8.png',
+  './assets/photos/File9.png'
 ]
 
 const createArticle = (path, ind) => {
