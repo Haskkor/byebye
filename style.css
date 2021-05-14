@@ -1,0 +1,270 @@
+:root {
+  --article-loader-bg-color: #A6B0B8;
+  --error-color: #FF0033;
+  --black-text-color: #3E3E3E;
+  --grey-text-color: #6A6A6A;
+  --main-bg-color: #D9D9D9;
+  --primary-color: #4F256D;
+  --primary: #28A47D;
+  --secondary-color: #BDA100;
+  --section-article-bg-color: #FFFFFF;
+  --section-bg-color: #EAEAEA;
+}
+
+h2 {
+  color: var(--secondary-color);
+}
+
+h3 {
+  margin: 4rem;
+}
+
+.body {
+  background-color: var(--main-bg-color);
+  font-family: Comic Sans MS, -apple-system, BlinkMacSystemFont, Segoe UI, Fira Sans, Helvetica Neue, Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.rainbow-text {
+  font-size: 4rem;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+  color: transparent;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10rem;
+}
+
+.carousel {
+  background: var(--section-bg-color);
+  width: 50%;
+  border-radius: 12px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 2px solid var(--primary);
+}
+
+.carousel-cell {
+  width: 70%;
+  height: 200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.carousel-cell img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  /* dim unselected */
+  opacity: 0.7;
+  -webkit-transform: scale(0.85);
+  transform: scale(0.85);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
+  transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+}
+
+/* brighten selected image */
+.carousel-cell.is-selected img {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-filter: none;
+  filter: none;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell {
+    height: 400px;
+  }
+}
+
+@media screen and ( min-width: 960px ) {
+  .carousel-cell {
+    width: 60%;
+  }
+}
+
+/* buttons, no circle */
+.flickity-prev-next-button {
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  opacity: 0.6;
+}
+
+.flickity-prev-next-button:hover {
+  background: transparent;
+  opacity: 1;
+}
+
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  color: var(--primary);
+}
+
+.flickity-prev-next-button.no-svg {
+  color: var(--primary);
+}
+
+/* closer to edge */
+.flickity-prev-next-button.previous {
+  left: 0;
+}
+
+.flickity-prev-next-button.next {
+  right: 0;
+}
+
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+.flickity-page-dots {
+  display: none;
+}
+
+.big-triangle-carousel {
+  -webkit-animation: bigTriangleCarouselAnimation 140s linear infinite; /* Chrome, Safari 5 */
+  -moz-animation: bigTriangleCarouselAnimation 140s linear infinite; /* Firefox 5-15 */
+  -o-animation: bigTriangleCarouselAnimation 140s linear infinite; /* Opera 12+ */
+  animation: bigTriangleCarouselAnimation 140s linear infinite; /* Chrome, Firefox 16+ */
+}
+
+.medium-triangle-carousel {
+  -webkit-animation: mediumTriangleCarouselAnimation 60s linear infinite; /* Chrome, Safari 5 */
+  -moz-animation: mediumTriangleCarouselAnimation 60s linear infinite; /* Firefox 5-15 */
+  -o-animation: mediumTriangleCarouselAnimation 60s linear infinite; /* Opera 12+ */
+  animation: mediumTriangleCarouselAnimation 60s linear infinite; /* Chrome, Firefox 16+ */
+}
+
+.small-triangle-carousel {
+  -webkit-animation: smallTriangleCarouselAnimation 40s linear infinite; /* Chrome, Safari 5 */
+  -moz-animation: smallTriangleCarouselAnimation 40s linear infinite; /* Firefox 5-15 */
+  -o-animation: smallTriangleCarouselAnimation 40s linear infinite; /* Opera 12+ */
+  animation: smallTriangleCarouselAnimation 40s linear infinite; /* Chrome, Firefox 16+ */
+}
+
+@-webkit-keyframes bigTriangleCarouselAnimation {
+  from {
+    -webkit-transform: rotate(0deg) translateX(8px) scale(1);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(8px) scale(0.7);
+  }
+}
+
+@-moz-keyframes bigTriangleCarouselAnimation {
+  from {
+    -moz-transform: rotate(0deg) translateX(8px) scale(1);
+  }
+  to {
+    -moz-transform: rotate(360deg) translateX(8px) scale(0.7);
+  }
+}
+
+@-o-keyframes bigTriangleCarouselAnimation {
+  from {
+    -o-transform: rotate(0deg) translateX(8px) scale(1);
+  }
+  to {
+    -o-transform: rotate(360deg) translateX(8px) scale(0.7);
+  }
+}
+
+@keyframes bigTriangleCarouselAnimation {
+  from {
+    transform: rotate(0deg) translateX(8px) scale(1);
+  }
+  to {
+    transform: rotate(360deg) translateX(8px) scale(0.7);
+  }
+}
+
+@-webkit-keyframes mediumTriangleCarouselAnimation {
+  from {
+    -webkit-transform: rotate(0deg) translateX(20px) scale(1);
+  }
+  to {
+    -webkit-transform: rotate(-360deg) translateX(20px) scale(0.7);
+  }
+}
+
+@-moz-keyframes mediumTriangleCarouselAnimation {
+  from {
+    -moz-transform: rotate(0deg) translateX(20px) scale(1);
+  }
+  to {
+    -moz-transform: rotate(-360deg) translateX(20px) scale(0.7);
+  }
+}
+
+@-o-keyframes mediumTriangleCarouselAnimation {
+  from {
+    -o-transform: rotate(0deg) translateX(20px) scale(1);
+  }
+  to {
+    -o-transform: rotate(-360deg) translateX(20px) scale(0.7);
+  }
+}
+
+@keyframes mediumTriangleCarouselAnimation {
+  from {
+    transform: rotate(0deg) translateX(20px) scale(1);
+  }
+  to {
+    transform: rotate(-360deg) translateX(20px) scale(0.7);
+  }
+}
+
+@-webkit-keyframes smallTriangleCarouselAnimation {
+  from {
+    -webkit-transform: rotate(0deg) translateX(9px) scale(1);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(9px) scale(0.7);
+  }
+}
+
+@-moz-keyframes smallTriangleCarouselAnimation {
+  from {
+    -moz-transform: rotate(0deg) translateX(9px) scale(1);
+  }
+  to {
+    -moz-transform: rotate(360deg) translateX(9px) scale(0.7);
+  }
+}
+
+@-o-keyframes smallTriangleCarouselAnimation {
+  from {
+    -o-transform: rotate(0deg) translateX(9px) scale(1);
+  }
+  to {
+    -o-transform: rotate(360deg) translateX(9px) scale(0.7);
+  }
+}
+
+@keyframes smallTriangleCarouselAnimation {
+  from {
+    transform: rotate(0deg) translateX(9px) scale(1);
+  }
+  to {
+    transform: rotate(360deg) translateX(9px) scale(0.7);
+  }
+}

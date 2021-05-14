@@ -1,0 +1,121 @@
+const paths = [
+  './assets/photos/File 1.jpeg',
+  './assets/photos/File 2.jpeg',
+  './assets/photos/File 3.jpeg',
+  './assets/photos/File 4.jpeg',
+  './assets/photos/File 5.jpeg',
+  './assets/photos/File 6.jpeg',
+  './assets/photos/File 7.jpeg',
+  './assets/photos/File 8.jpeg',
+  './assets/photos/File 9.jpeg',
+  './assets/photos/File 10.jpeg',
+  './assets/photos/File 11.jpeg',
+  './assets/photos/File 12.jpeg',
+  './assets/photos/File 13.jpeg',
+  './assets/photos/File 14.jpeg',
+  './assets/photos/File 15.jpeg',
+  './assets/photos/File 16.jpeg',
+  './assets/photos/File 17.jpeg',
+  './assets/photos/File 18.jpeg',
+  './assets/photos/File 19.jpeg',
+  './assets/photos/File 20.jpeg',
+  './assets/photos/File 21.jpeg',
+  './assets/photos/File 22.jpeg',
+  './assets/photos/File 23.jpeg',
+  './assets/photos/File 24.jpeg',
+  './assets/photos/File 25.jpeg',
+  './assets/photos/File 26.jpg',
+  './assets/photos/File 27.jpeg',
+  './assets/photos/File 28.jpeg',
+  './assets/photos/File 29.jpg',
+  './assets/photos/File 30.jpeg',
+  './assets/photos/File 31.jpeg',
+  './assets/photos/File 32.jpeg',
+  './assets/photos/File 33.jpeg',
+  './assets/photos/File 34.jpeg',
+  './assets/photos/File 35.jpeg',
+  './assets/photos/File 36.jpg',
+  './assets/photos/File 37.jpg',
+  './assets/photos/File 38.jpg',
+  './assets/photos/File 39.jpg',
+  './assets/photos/File 40.jpg',
+  './assets/photos/File 41.png',
+  './assets/photos/File 42.jpg',
+  './assets/photos/File 43.jpg',
+  './assets/photos/File 44.png',
+  './assets/photos/File 45.jpeg',
+  './assets/photos/File 46.jpeg',
+  './assets/photos/File 47.jpeg',
+  './assets/photos/File 48.png',
+  './assets/photos/File 49.jpeg',
+  './assets/photos/File 50.jpeg',
+  './assets/photos/File 51.jpeg',
+  './assets/photos/File 52.jpeg',
+  './assets/photos/File 53.jpg',
+  './assets/photos/File 54.jpg',
+  './assets/photos/File 55.png',
+  './assets/photos/File 56.jpeg',
+  './assets/photos/File 57.jpeg',
+  './assets/photos/File 58.gif',
+  './assets/photos/File 59.jpeg',
+  './assets/photos/File 60.jpeg',
+  './assets/photos/File 61.jpeg',
+  './assets/photos/File 62.jpeg',
+  './assets/photos/File 63.jpeg',
+  './assets/photos/File 64.jpg',
+  './assets/photos/File 65.jpg',
+  './assets/photos/File 66.jpg',
+  './assets/photos/File 67.jpeg',
+  './assets/photos/File 68.jpeg',
+  './assets/photos/File 69.jpeg',
+  './assets/photos/File 70.jpeg',
+  './assets/photos/File 71.jpeg',
+  './assets/photos/File 72.jpg',
+  './assets/photos/File 73.jpg',
+  './assets/photos/File 74.jpeg',
+  './assets/photos/File 75.jpg',
+  './assets/photos/File 76.jpg',
+  './assets/photos/File 77.jpeg',
+  './assets/photos/File 78.jpg',
+  './assets/photos/File 79.jpeg',
+  './assets/photos/File 80.jpeg',
+  './assets/photos/File 81.jpeg',
+  './assets/photos/File 82.jpeg',
+  './assets/photos/File 83.jpeg',
+  './assets/photos/File 84.jpeg',
+  './assets/photos/File 85.jpg',
+  './assets/photos/File 86.jpg',
+  './assets/photos/File 87.jpg',
+  './assets/photos/File 88.jpg',
+  './assets/photos/File 89.jpeg',
+  './assets/photos/File 90.jpeg',
+  './assets/photos/File 91.jpeg',
+  './assets/photos/File 92.jpeg',
+  './assets/photos/File 93.jpeg',
+  './assets/photos/File 94.jpeg',
+  './assets/photos/File 95.jpeg',
+  './assets/photos/File 96.jpeg'
+]
+
+const createArticle = (path, ind) => {
+  const carousel = document.getElementById("carousel");
+  const div = document.createElement("DIV");
+  div.className = 'carousel-cell';
+  if (ind === 0) div.className = 'carousel-cell is-selected';
+  const img = document.createElement("IMG");
+  img.src = path;
+  div.appendChild(img);
+  carousel.appendChild(div);
+};
+
+const pageLoaded = () => {
+  paths.map((p, i) => createArticle(p, i));
+  var elem = document.querySelector('.carousel');
+  var flkty = new Flickity( elem, {
+    autoPlay: true,
+    cellAlign: 'center',
+    contain: false,
+  });
+};
+
+window.addEventListener("load", pageLoaded);
