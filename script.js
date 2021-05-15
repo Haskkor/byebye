@@ -41,7 +41,6 @@ const paths = [
   './assets/photos/File 40.jpg',
   './assets/photos/File 41.png',
   './assets/photos/File 42.jpg',
-  './assets/photos/File 43.jpg',
   './assets/photos/File 44.png',
   './assets/photos/File 45.jpeg',
   './assets/photos/File 46.jpeg',
